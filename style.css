@@ -1,0 +1,184 @@
+/* ===============================
+   GLOBAL STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* ===============================
+   THEME TOGGLE
+================================ */
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.container {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* ===============================
+   INPUT GROUP
+================================ */
+.input-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+  transition: 0.3s;
+  background: #fff;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Floating label */
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -8px;
+  font-size: 11px;
+  color: #333;
+}
+
+/* ===============================
+   PASSWORD TOGGLE
+================================ */
+.toggle {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* ===============================
+   PASSWORD STRENGTH BAR
+================================ */
+.strength {
+  height: 5px;
+  width: 0;
+  border-radius: 4px;
+  margin-top: 6px;
+  transition: width 0.3s;
+}
+
+/* ===============================
+   ERROR MESSAGE
+================================ */
+small {
+  color: #ff4d4d;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.input-group.error small {
+  visibility: visible;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #00f2fe;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4facfe;
+}
+
+/* ===============================
+   LINKS
+================================ */
+p {
+  color: #fff;
+  font-size: 14px;
+}
+
+a {
+  color: #00f2fe;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   DASHBOARD
+================================ */
+#userInfo {
+  white-space: pre-line;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 420px) {
+  .container {
+    margin: 20px;
+  }
+}

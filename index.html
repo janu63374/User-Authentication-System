@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<button id="themeToggle">🌙</button>
+
+<div class="container">
+  <form id="registerForm">
+    <h2>Create Account</h2>
+
+    <div class="input-group">
+      <input type="text" id="username" required />
+      <label>Username</label>
+      <small></small>
+    </div>
+
+    <div class="input-group">
+      <input type="email" id="email" required />
+      <label>Email</label>
+      <small></small>
+    </div>
+
+    <div class="input-group">
+      <input type="tel" id="phone" required />
+      <label>Phone Number</label>
+      <small></small>
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="password" required />
+      <label>Password</label>
+      <span class="toggle" onclick="togglePassword('password')">👁️</span>
+      <div class="strength" id="strength"></div>
+      <small></small>
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="confirmPassword" required />
+      <label>Confirm Password</label>
+      <span class="toggle" onclick="togglePassword('confirmPassword')">👁️</span>
+      <small></small>
+    </div>
+
+    <button type="submit">Register</button>
+
+    <p style="text-align:center; margin-top:10px;">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
